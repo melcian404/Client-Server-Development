@@ -1,0 +1,396 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment Information</title>
+
+  <!-- HTML RUBRIC TEMPLATE -->
+
+  <!-- Bootstrap Grid -->
+  <link rel="stylesheet" href="/shared/custom_html/shared/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!--globalCampus.css containing typography standards -->
+  <link rel="stylesheet" href="/shared/HTML-Template-Library/GC Core Paced/module_templates/../assets/css/main.min.css">
+  <style>
+    h2 {
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: 0;
+    }
+
+    #rubric-responsive table {
+      margin-left: auto;
+      margin-right: auto;
+      border-collapse: collapse;
+      max-width: 1080px;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    #rubric-responsive thead th:first-child {
+      width: 17%;
+    }
+    #rubric-responsive thead th:last-child {
+      width: 10%;
+    }
+
+    #rubric-responsive th,
+    #rubric-responsive td,
+    #rubric-responsive tbody > tr > :nth-child(1) {
+      border: 1px solid black;
+      padding: 7px;
+    }
+
+    #rubric-responsive th,
+    #rubric-responsive tbody > tr > :nth-child(1) {
+      background-color: #f5f5f5;
+    }
+
+#rubric-responsive th {text-align: center;
+                      }
+    #rubric-responsive td,
+    #rubric-responsive tbody > tr > :nth-child(1) {
+      vertical-align: text-top;
+    }
+
+    /* Center data in "Value" column */
+    #rubric-responsive tbody > tr > :last-child {
+      text-align: center;
+    }
+
+    /* Style first column like header row in case <th> isn't used */
+    #rubric-responsive tbody > tr > :nth-child(1) {
+      font-weight: bold;
+      text-align: center;
+    }
+
+/* right align total: text */
+      #rubric-responsive tbody > tr:last-child > :nth-child(1) {
+        font-weight: bold;
+        text-align: right;
+}
+
+    @media only screen and (max-width: 800px) {
+
+      /* Display table elements as block */
+      #rubric-responsive table,
+      #rubric-responsive thead,
+      #rubric-responsive tbody,
+      #rubric-responsive th,
+      #rubric-responsive td,
+      #rubric-responsive tr,
+      #rubric-responsive tfoot {
+        display: block;
+      }
+
+      #rubric-responsive caption {
+        display: inline-block;
+        margin: 0px auto;
+      }
+
+      /* Remove border from table and center it on screen */
+      #rubric-responsive table {
+        border: none;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+      }
+
+
+    /* Hide table headers (but not display: none; (for accessibility) */
+      #rubric-responsive thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      /* Style responsive table rows */
+      #rubric-responsive tr {
+        border: 1px solid #ccc;
+      }
+
+      /* Style responsive table cells */
+      #rubric-responsive td {
+        border: none;
+        border-bottom: 1px solid #eee;
+      }
+
+      #rubric-responsive td:before {
+      /* Bring "data-title" attribute into table cells */
+        content: attr(data-attr);
+      /* display it as inline block so it doesn't interfere with <td> */
+        display: inline-block;
+      /* make it take up it's entire "row" */
+        width: 100%;
+      /* bold font so it looks like a th */
+        font-weight: bold;
+      }
+
+  /* Remove "data-title" attribute from first child <td> cells */
+  /* this removes "Criteria" from the Total row, and will remove criteria from any <td> cells that should be <th> */
+      #rubric-responsive tbody>tr>td:first-child:before {
+          content: none;
+      }
+
+      /* Center data in "Value" column */
+      #rubric-responsive tbody > tr > :last-child {
+        text-align: left;
+      }
+
+      /* Don't display "100%" cell */
+      #rubric-responsive tr:last-child td:last-of-type {
+        display: none;
+      }
+
+      /* Add "100%" after Total:  */
+      #rubric-responsive
+        tr:last-child
+        td:first-of-type::after {
+        content: " 100%";
+      }
+      /* remove padding from last row */
+      #rubric-responsive tr:last-child > td {
+        padding: 7px;
+      }
+    }
+
+    /* Print Styles*/
+    @media print {
+      @page {
+        size: landscape;
+      }
+
+      span.rsbtn_text {
+        display: none !important;
+      }
+
+      p,
+      ul,
+      ol,
+      li,
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr,
+      tfoot {
+        font-size: 12px;
+      }
+
+      h1,
+      h2 {
+        font-size: 90%;
+      }
+
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: 80%;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
+        margin-bottom: 5px;
+        margin-top: 0px;
+      }
+
+      ul,
+      ol {
+        margin-bottom: 5px;
+        margin-top: 0px;
+      }
+
+      .d-print-none {
+        display: none;
+      }
+
+      .d-print-block {
+        display: block;
+      }
+    }
+  </style> 
+     
+  <style>
+    img {
+      float: right;
+      margin-left: 20px;
+      width: 38vw;
+    }
+@media only screen and (max-width: 800px) {
+    img {
+      float:none;
+      align: center;
+      width:100vw;
+      display: block; 
+      margin-left: auto; 
+      margin-right: auto;
+    }
+  </style>
+  </head><body><h1>CS 340 Project Two Guidelines and Rubric</h1>
+<!--Begin copy to add more sections. Use appropriate heading tags for subsections-->
+<h2>Competencies</h2>
+<p>In this project, you will demonstrate your mastery of the following competencies:</p>
+<ul>
+<li>Apply database systems concepts and principles in the development of a client/server application</li>
+<li>Develop client-side code that interfaces with databases</li>
+</ul>
+<h2>Scenario</h2>
+<p>You work for Global Rain, a software engineering company that specializes in custom software design and development. Your team has been assigned to work on a project for an innovative international rescue-animal training company, Grazioso Salvare. You have been made the lead developer on this project.</p>
+<p>As part of its work, Grazioso Salvare identifies dogs that are good candidates for search-and-rescue training. When trained, these dogs are able to find and help to rescue humans or other animals, often in life-threatening conditions. To help identify dogs for training, Grazioso Salvare has reached an agreement with a non-profit agency that operates five animal shelters in the region around Austin, Texas. This non-profit agency will provide Grazioso Salvare with data from their shelters.</p>
+<p>In meeting with the client, you have discovered that they look for certain profiles in dogs to train. For example, search-and-rescue training is generally more effective for dogs that are no more than two years old. Additionally, different breeds of dogs are proficient at different types of rescue, such as water rescue, mountain or wilderness rescue, locating humans after a disaster, or finding a specific human by tracking their scent.</p>
+<p>Grazioso Salvare is seeking a software application that can work with existing data from the animal shelters to identify and categorize available dogs. Global Rain has contracted for a full stack development of this application, including a database and a client-facing web application dashboard through which users at Grazioso Salvare will access the database.</p>
+<p>In the initial phases of this development, you developed a database and a Python module enabling CRUD functionality for MongoDB. For Project Two, you will complete the development of this project by coding the dashboard and the database interface logic. This will include dashboard attributes. The dashboard must be a user-friendly, intuitive interface that will reduce user errors and training time.</p>
+<p>Additionally, Grazioso Salvare has requested that the code for this project be open source and accessible on GitHub, so that it may be used and adapted by similar organizations. To that end, they have asked that you also create a README file that documents and provides instructions for reproducing the project.</p>
+<h2>Directions</h2>
+<p><strong>Web Application Dashboard (Python Code)<br></strong>After successful completion of previous milestones and Project One, you have created a database and established successful CRUD routines in Python for MongoDB. For Project Two, you will now create a fully functional MongoDB dashboard. This will allow the client, Grazioso Salvare, to interact with and visualize the database.</p>
+<p>To create the dashboard, you will create the different components in Python code. Dashboard web applications lend well to the MVC design pattern. Using this design pattern, the model is contained and accessed in MongoDB, the views are dashboard widgets, and the controller uses your CRUD Python module for queries as part of the interaction between components. You will also be required to test and deploy the dashboard, taking screenshots to show that each of the components executes successfully.</p>
+<p><img src="course_documents/CS%20340_Project%20Two_Module%20Seven%20Introduction_Branded%20Image.jpg" alt="The graphic gives a more visual depiction of the steps for the project. Step 1: Review the specs. Your code will put these into action! Step 2: Get started on the dashboard with an unfiltered data table of shelter animals. Step 3: Develop queries that allow users to filter the database. Step 4: Build interactive options through which users will activate the filters. Step 5: Add widgets for dynamic presentations of retrieved data. Step 6: Test the dashboard, verifying functionality with screen captures. Step 7: Create a README file to document your work." title="The graphic gives a more visual depiction of the steps for the project. Step 1: Review the specs. Your code will put these into action! Step 2: Get started on the dashboard with an unfiltered data table of shelter animals. Step 3: Develop queries that allow users to filter the database. Step 4: Build interactive options through which users will activate the filters. Step 5: Add widgets for dynamic presentations of retrieved data. Step 6: Test the dashboard, verifying functionality with screen captures. Step 7: Create a README file to document your work." data-d2l-editor-default-img-style="true" style="width: auto; max-width: 100vw; float: none; display: block; margin-left: auto; margin-right: auto;"></p>
+<ol>
+<li>Before developing the Python code for the dashboard, be sure to review the Dashboard Specifications Document provided by the UI/UX developer at Global Rain. This document is located in the Supporting Materials section and will provide you with examples of the different dashboard widgets you will create:
+<ul>
+<li>Interactive options to filter the Austin Animal Center Outcomes data set</li>
+<li>A data table which dynamically responds to the filtering options</li>
+<li>A geolocation chart and a second chart of your choice that dynamically respond to the filtering options</li>
+</ul>
+In addition to the widgets, you have been asked to include the <strong>Grazioso Salvare logo and a unique identifier</strong> containing your name somewhere on the dashboard. A high-resolution copy of the logo is included in the Supporting Materials section.</li>
+<li>Next, you will begin developing the Python code for your dashboard. Starter code is contained in the ProjectTwoDashboard.ipynb file, linked in the What to Submit section. Start by creating a <strong>data table</strong> on the dashboard which shows an <em>unfiltered</em> view of the Austin Animal Center Outcomes data set. To populate the data onto your table, <strong>utilize your previous CRUD Python module</strong> from Project One to run a “retrieve all” query and bring in the data from MongoDB. <br><strong>Tip</strong>: Be sure to consider your client when creating the interactive data table. Consider optional features that will make the table easier to use, such as limiting the number of rows displayed, enabling pagination (advanced), enabling sorting, and so on. <br><strong>Note</strong>: If you completed the Module Six Milestone, you have already completed this step. Copy your code for the data table into the ProjectTwoDashboard.ipynb file.</li>
+<li>Next, you will make sure that the dashboard filter options can properly retrieve data from the database. Start by <strong>developing database queries that match the required filter functionality</strong>. Refer to the Rescue Type and Preferred Dog Breeds Table, located in the Dashboard Specifications Document, to help you construct these queries.<br><strong>Note</strong>: Be sure to <strong>utilize your previous CRUD Python module</strong> (a PY file) from Project One to develop these database queries. You will need to hard code in the username/password for the “aacuser” account as part of the CRUD Python module class instantiation.</li>
+<li>You must develop the controller pieces to <strong>create interactive options that allow for the selection of data based on your filtering functions</strong> (such as radio items or drop-downs). Develop these pieces in your IPYNB file, and be sure to import and use your CRUD Python module queries from Step 3. These interactive options will enable the <strong>control of other dashboard widgets</strong>, such as the data table and charts.<br><strong>Tip</strong>: You may choose any interactive option that you wish, such as radio items, a drop-down menu, and so on, as long as the client is able to intuitively use the interactive option to filter the data. Refer to the Dash Core Components reading from the module resources to help you set up these options.</li>
+<li>Next, you must modify or create the dashboard widgets that receive input from the interactive options and present those dynamic updates to the client. Be sure to modify or create these widgets in your IPYNB file. Specifically, you must do the following:
+<ul>
+<li>Modify the data table you created in Step 2 so that it is <strong>an interactive data table that responds to input</strong> from the interactive options.</li>
+<li><strong>Create charts that display data in response to updates</strong> from the data table. As outlined in the Dashboard Specifications Document, you are required to create, at minimum, a geolocation chart and a second chart of your choice.</li>
+</ul>
+<strong>Note</strong>: If you completed the Module Six Milestone, you have already begun work on this step by creating the geolocation chart. Copy your code into the ProjectTwoDashboard.ipynb file. You will need to make sure that this chart receives updates from the interactive options.</li>
+<li>Finally, after developing all of your code, you must test and deploy the dashboard to make sure that all of your components work. To complete this step, run your IPYNB file. You must either <strong>take screenshots or create a screencast of your dashboard and widget functionality</strong>. Each of your screenshots or your screencast should contain the <strong>Grazioso Salvare logo</strong> and your <strong>unique identifier</strong>. Your screenshots or screencast must show the following:
+<ul>
+<li>The starting state of your dashboard, which should include your widgets for the <strong>interactive options to filter data (such as radio items or drop-downs), the interactive data table, and the charts</strong></li>
+<li>Executions of your dashboard, showing the widgets after <strong>each</strong> of the following data filters has been applied (four screenshots total):
+<ul>
+<li>Water Rescue</li>
+<li>Mountain or Wilderness Rescue</li>
+<li>Disaster or Individual Tracking</li>
+<li>Reset (returns all widgets to their original, unfiltered state)</li>
+</ul>
+</li>
+</ul>
+You will include all of these screenshots, or your screencast, in your README file when describing the functionality of your project. These screenshots are <strong>required</strong> as they demonstrate proof of your dashboard’s functionality.</li>
+</ol>
+<p><strong>README File<br></strong>Grazioso Salvare has requested documentation to accompany the code for your dashboard. This will ensure that they are able to understand the work that was completed and more easily maintain the code for this project.</p>
+<p>You have been asked to <strong>create a README file that documents the project and includes instructions for reproducing the project</strong>. Be sure to address all of the following areas:</p>
+<ul>
+<li><strong>Describe the required functionality</strong> of the project. Include the screenshots or screencast taken while testing and deploying your dashboard (Step 6) as proof that you have achieved the required functionality.</li>
+<li><strong>Describe the tools used to achieve this functionality and a rationale for why these tools were used.</strong>
+<ul>
+<li>Be sure to explain why MongoDB was used as the model component of the development, including what specific qualities or capabilities it provides for interfacing with Python.</li>
+<li>Be sure to explain the Dash framework that provides the view and controller structure for the web application.</li>
+<li>Be sure to include links to any resources or software applications that were accessed or used.</li>
+</ul>
+</li>
+<li><strong>Explain the steps that were taken to complete the project.</strong></li>
+<li><strong>Identify any challenges that were encountered and explain how those challenges were overcome.</strong></li>
+</ul>
+<!--End copy to add section->
+<!--Do NOT change text for "What to Submit" heading-->
+<h2>What to Submit</h2>
+<p>To complete this project, you must submit the following:</p>
+<p><strong>Web Application Dashboard (Python Code)<br></strong>Submit a zipped folder containing all of the code for your dashboard. The zipped folder should include your completed<span style="text-decoration: underline;"> <a href="course_documents/ProjectTwoDashboard.ipynb?_&amp;d2lSessionVal=ScQoRYLN9OTGv4T9RbCyYwie6&amp;ou=1332057" target="_blank" rel="noopener">ProjectTwoDashboard.ipynb file</a></span> containing the source code for your dashboard. Be sure to also include the code for the CRUD Python module (PY file) that you originally developed in Project One. All code files should follow industry standard best practices, including well-commented code.</p>
+<p><strong>README<br></strong>Your submission should be a Word document that documents the project and provides instructions for reproducing it. In your README file, be sure to include all required screenshots (or your screencast) to demonstrate the functionality of your dashboard.</p>
+<h2>Supporting Materials</h2>
+<p>The following resource(s) may help support your work on the project:</p>
+<p><strong>Reading: </strong><span style="text-decoration: underline;"><a href="course_documents/CS%20340%20Dashboard%20Specifications%20Document.pdf?_&amp;d2lSessionVal=ScQoRYLN9OTGv4T9RbCyYwie6&amp;ou=1332057" target="_blank" rel="noopener">CS 340 Dashboard Specifications Document PDF</a></span><br>This document was created by your UI/UX developer and details the necessary functionality of your dashboard, as well as providing you with a prototype of the dashboard layout. This document also contains the Rescue Type and Preferred Dog Breeds table, which aligns dog breeds with their use in different types of rescue. Use this table to help structure the queries for your dashboard filtering options.</p>
+<p><strong>Image: </strong><span style="text-decoration: underline;"><a href="course_documents/Grazioso%20Salvare%20Logo.png?_&amp;d2lSessionVal=ScQoRYLN9OTGv4T9RbCyYwie6&amp;ou=1332057" target="_blank" rel="noopener">Grazioso Salvare Logo</a></span><br>This high-resolution PNG file contains the Grazioso Salvare logo. Be sure to include this logo as part of your dashboard to ensure that the application is properly branded.</p>
+<p><strong>Data Set: </strong><span style="text-decoration: underline;"><a href="course_documents/aac_shelter_outcomes.csv?_&amp;d2lSessionVal=ScQoRYLN9OTGv4T9RbCyYwie6&amp;ou=1332057" target="_blank" rel="noopener">Austin Animal Center Outcomes Spreadsheet</a></span><br>Grazioso Salvare has provided you with this sample data set (CSV file) of animal center outcomes. This will become the basis of your database and can be used to test the functionality of your code. This data set has been modified for the purposes of this project. Specifically, the following columns have been added: location_lat (latitude), location_long (longitude), and age_upon_outcome_in_weeks (the age of the animal, given in weeks).<br><br>Reference: Austin Animal Center. (2020). <em>Austin Animal Center Outcomes</em> [Data set]. City of Austin, Texas Open Data Portal. https://doi.org/10.26000/025.000001</p>
+<p><strong>Reading: </strong><span style="text-decoration: underline;"><a href="course_documents/CS%20340%20Jupyter%20Notebook%20in%20Apporto%20(Virtual%20Lab)%20Tutorial.pdf?_&amp;d2lSessionVal=ScQoRYLN9OTGv4T9RbCyYwie6&amp;ou=1332057" target="_blank" rel="noopener">CS 340 Jupyter Notebook in Apporto (Virtual Lab) Tutorial PDF</a></span><br>This tutorial will help you navigate the technology you will be using in this course. You will learn how to get into the Jupyter Notebook via the Virtual Lab (Apporto), as well as how to complete, save, and download your work.</p>
+<p><strong>Reading: </strong><span style="text-decoration: underline;"><a href="course_documents/CS%20340%20Mongo%20in%20Apporto%20(Virtual%20Lab)%20Tutorial.pdf?_&amp;d2lSessionVal=ScQoRYLN9OTGv4T9RbCyYwie6&amp;ou=1332057" target="_blank" rel="noopener">CS 340 Mongo in Apporto (Virtual Lab) Tutorial PDF</a></span><br>This tutorial will help you navigate the different Mongo tools needed for your development.</p>
+<p><strong>Textbook: </strong><span style="text-decoration: underline;"><a href="https://go.oreilly.com/SNHU/library/view/head-first-python/9781491919521/" target="_blank" rel="noopener">Head First Python</a></span><br>This Shapiro Library textbook was designed to teach the Python programming language. Refer to this resource if you need a refresher on any Python syntax as you develop your code.</p>
+<p><strong>Reading: </strong><span style="text-decoration: underline;"><a href="https://www.python.org/dev/peps/pep-0008/" target="_blank" rel="noopener">Style Guide for Python Code</a></span><br>Refer to this style guide when developing your Python code for this project. It is important that your code follows industry standard best practices, such as including clear variable names, exception handling, and in-line comments throughout your code.</p>
+<p><strong>Reading: </strong><span style="text-decoration: underline;"><a href="https://www.makeareadme.com/" target="_blank" rel="noopener">Make a README</a></span><br>This reading describes the purpose behind README files, and will help you keep in mind the purpose and intended audience for your README file. You are not required to use the same sections as suggested in this reading. As a note, the examples in this article use the MD format, which is a common format for README files on GitHub. You have been asked to submit your README file as a Word document for this project.</p>
+<h2 style="text-align: center;">Project Two Rubric</h2>
+<div id="rubric-responsive">
+<table>
+<thead>
+<tr><!--Do NOT change text for "Criteria" column heading-->
+<th class="table-borderless" scope="col">Criteria</th>
+<th scope="col">Exemplary (100%)</th>
+<th scope="col">Proficient (85%)</th>
+<th scope="col">Needs Improvement (55%)</th>
+<th scope="col">Not Evident (0%)</th>
+<!--Do NOT change text for "Value" column heading-->
+<th scope="col">Value</th>
+</tr>
+</thead>
+<tbody><!--Begin copy to add ROWS. Update "td data-attr=" to match table headings exactly before copying and pasting.-->
+<tr>
+<th scope="row">Dashboard (Python Code): CRUD Python Module Queries for Filtering</th>
+<td data-attr="Exemplary (100%)">Exceeds proficiency in an exceptionally clear, insightful, sophisticated, or efficient manner</td>
+<td data-attr="Proficient (85%)">Develops database queries that match the required filter functionality and utilize the previous CRUD Python module for direct MongoDB access</td>
+<td data-attr="Needs Improvement (55%)">Shows progress toward proficiency, but with errors or omissions; areas for improvement may include database queries that match the required filter functionality and utilize the previous CRUD Python module for direct MongoDB access</td>
+<td data-attr="Not Evident (0%)">Does not attempt criterion</td>
+<td data-attr="Value">15</td>
+</tr>
+<tr>
+<th scope="row">Dashboard (Python Code and Screenshots): Interactive Filtering Options</th>
+<td data-attr="Exemplary (100%)">Exceeds proficiency in an exceptionally clear, insightful, sophisticated, or efficient manner</td>
+<td data-attr="Proficient (85%)">Creates interactive options that allow for the selection of data based on filtering functions and the control of other dashboard widgets, and demonstrates successful executions by providing screenshots with a unique identifier</td>
+<td data-attr="Needs Improvement (55%)">Shows progress toward proficiency, but with errors or omissions; areas for improvement may include lack of interactive options for filtering data and other dashboard components, or lack of screenshots demonstrating successful completion of work</td>
+<td data-attr="Not Evident (0%)">Does not attempt criterion</td>
+<td data-attr="Value">15</td>
+</tr>
+<tr>
+<th scope="row">Dashboard (Python Code and Screenshots): Interactive Data Table</th>
+<td data-attr="Exemplary (100%)">Exceeds proficiency in an exceptionally clear, insightful, sophisticated, or efficient manner</td>
+<td data-attr="Proficient (85%)">Creates an interactive data table that responds to input from other controls, and demonstrates successful executions by providing screenshots with a unique identifier</td>
+<td data-attr="Needs Improvement (55%)">Shows progress toward proficiency, but with errors or omissions; areas for improvement may include an interactive data table that does not respond to input from other controls, or lack of screenshots demonstrating successful completion of work</td>
+<td data-attr="Not Evident (0%)">Does not attempt criterion</td>
+<td data-attr="Value">20</td>
+</tr>
+<tr>
+<th scope="row">Dashboard (Python Code and Screenshots): Charts</th>
+<td data-attr="Exemplary (100%)">Exceeds proficiency in an exceptionally clear, insightful, sophisticated, or efficient manner</td>
+<td data-attr="Proficient (85%)">Creates charts to display data in response to inputs from other controls, and demonstrates successful executions by providing screenshots with a unique identifier</td>
+<td data-attr="Needs Improvement (55%)">Shows progress toward proficiency, but with errors or omissions; areas for improvement may include charts not displaying data in response to input from controls, or lack of screenshots demonstrating successful completion of work</td>
+<td data-attr="Not Evident (0%)">Does not attempt criterion</td>
+<td data-attr="Value">20</td>
+</tr>
+<tr>
+<th scope="row">README: Documenting the Project</th>
+<td data-attr="Exemplary (100%)">Exceeds proficiency in an exceptionally clear, insightful, sophisticated, or creative manner</td>
+<td data-attr="Proficient (85%)">Creates a README file that documents the project by describing the required functionality, tools used to achieve this functionality, and a rationale for why these particular tools were used</td>
+<td data-attr="Needs Improvement (55%)">Shows progress toward proficiency, but with errors or omissions; areas for improvement may include a README file that does not document the required functionality and rationale for the particular tools used</td>
+<td data-attr="Not Evident (0%)">Does not attempt criterion</td>
+<td data-attr="Value">15</td>
+</tr>
+<tr>
+<th scope="row">README: Reproduction Instructions</th>
+<td data-attr="Exemplary (100%)">Exceeds proficiency in an exceptionally clear, insightful, sophisticated, or creative manner</td>
+<td data-attr="Proficient (85%)">Creates instructions for reproducing the project by explaining steps that were taken to complete the project, any challenges that were encountered, and how those challenges were overcome</td>
+<td data-attr="Needs Improvement (55%)">Shows progress toward proficiency, but with errors or omissions; areas for improvement may include lack of instructions for reproducing and completing the project or explanations of how challenges were encountered and overcome</td>
+<td data-attr="Not Evident (0%)">Does not attempt criterion</td>
+<td data-attr="Value">10</td>
+</tr>
+<tr>
+<th scope="row">Articulation of Response</th>
+<td data-attr="Exemplary (100%)">Exceeds proficiency in an exceptionally clear, insightful, sophisticated, or creative manner</td>
+<td data-attr="Proficient (85%)">Clearly conveys meaning with correct grammar, sentence structure, and spelling, demonstrating an understanding of audience and purpose</td>
+<td data-attr="Needs Improvement (55%)">Shows progress toward proficiency, but with errors in grammar, sentence structure, and spelling, negatively impacting readability</td>
+<td data-attr="Not Evident (0%)">Submission has critical errors in grammar, sentence structure, and spelling, preventing understanding of ideas</td>
+<td data-attr="Value">5</td>
+</tr>
+<!--End copy to add ROWS--> <!--Paste additional ROWS here.-->
+<tr><!--Update "colspan" if columns are removed. Number should equal 1 less than total number of columns.-->
+<td colspan="5" style="text-align: right;">Total:</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table>
+</div></body></html>
